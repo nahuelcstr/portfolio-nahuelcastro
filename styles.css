@@ -3,37 +3,48 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
     font-family: "Lexend", sans-serif;
     font-style: normal;
     font-weight: 400;
 }
 body{
-    background-color: #331b3b;
+    scroll-behavior: smooth;
 }
 /* NAVBAR */
 h1{
     line-height: 0.9;
-    color: #f1debd ;
+    color: #673C62 ;
+    pad: 5px;
 }
 .nav{
     display: flex;
-    height: 100px;
+    width: 100%;
+    height: 75px;
     justify-content: space-between;
-    padding: 0 50px;
     align-items: center;
-    background-color: #320139;
+    background-color: #CEF7A0;
+    padding: 0 4rem;
+    /*OCULTAR NAVBAR*/
+    position: fixed;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    z-index: 1000;
 }
-.options ul li{
+.nav.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.options ul a{
+    text-decoration: none;
     cursor: pointer;
-    display: inline-block;
-    margin-right: 15px;
-    color: #f1debd ;
+    color: #673C62 ;
+    margin: 0 10px;
 }
 .nav button{
     padding: 10px 30px;
-    color: #333e50;
-    background: #f1debd;
+    color: #F0F2FA;
+    background: #673C62;
     cursor: pointer;
     border-radius: 50px;
     border: none;
@@ -43,9 +54,50 @@ h1{
 main{
     display: flex;
     flex-direction: column;
-    margin: 0;
+    align-items: center;
 }
 .containerSection{
-    width: 80%;
-    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+#inicio{
+    background-color: #F0F2FA;
+    min-height: 100%; 
+    font-size: xx-large;
+    box-sizing: border-box;
+}
+#inicio span{
+    color: #673C62;
+}
+#inicio a{
+    font-size: large;
+    text-decoration: none;
+    color:#F0F2FA;
+    background-color: #673C62;
+    line-height: 5rem;
+    padding: 9px 9px;
+}
+#sobre-mi{
+    background-color: #CEF7A0;
+}
+#educacion{
+    background-color: #F0F2FA;
+}
+#proyectos{
+    background-color: #CEF7A0;
+}
+#contacto{
+    background-color: #F0F2FA;
+}
+/* PIE DE PAGINA */
+footer{
+    background-color: #141414;
+    height: 100px;
+}
+footer span{
+    color: #F0F2FA;
+    
 }

@@ -12,26 +12,48 @@
       <h1>Cn.</h1>
       <nav class="options">
         <ul>
-          <li>Inicio</li>
-          <li>Sobre mi</li>
-          <li>Educacion</li>
-          <li>Proyectos</li>
+          <a href="#inicio">Inicio</a></li>
+          <a href="#sobre-mi">Sobre mi</a></li>
+          <a href="#educacion">Educacion</a></li>
+          <a href="#proyectos">Proyectos</a></li>
         </ul>
       </nav>
-      <a href="#contactos"><button>Contacto</button></a>
+      <a href="#contacto"><button>Contacto</button></a>
     </header>
-    <main>
-        <section class="containerSection">Sobre mi:</section>
-        <section class="containerSection">Educacion:</section>
-        <section class="containerSection">Proyectos:</section>
-        <section class="containerSection">Contacto:</section>
-    </main>
+        <section id="inicio" class="containerSection">
+          <div>
+              Hola, mi nombre es 
+              <span class="color-text">Nahuel Castro</span>
+              <br>
+              Te presento mi portafolio.
+              <p>
+                <a href="#sobre-mi">
+                Comencemos
+                </a>
+              </p>
+          </div>    
+        </section>
+        <section id="sobre-mi" class="containerSection">Sobre mi:
+          <br>
+          VAMO BOCAAAAA
+          AGUANTEN LAS PASTAS EL HELADO Y LAS OTAKU
+        </section>
+        <section id="educacion" class="containerSection">Educacion:</section>
+        <section id="proyectos" class="containerSection">Proyectos:</section>
+        <section id="contacto" class="containerSection">Contacto:</section>
+        <script>
+            window.addEventListener('scroll', () => {
+              const nav = document.querySelector('.nav');
+              if (window.scrollY > 100) {
+                nav.classList.add('show');
+              } else {
+                navbar.classList.remove('show');
+              }
+            });
+</script>
   </body>
   <footer>
-    ©2025 Nahuel Castro
-    <div class="redesfooter">
-      <img src="" alt="instagram propietario" />
-      <img src="" alt="githhub propietario" />
+    <span>©2025 Nahuel Castro</span>
     </div>
   </footer>
 </html>
