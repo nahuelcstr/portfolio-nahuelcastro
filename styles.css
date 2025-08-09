@@ -79,6 +79,14 @@ main{
     background-color: #673C62;
     line-height: 5rem;
     padding: 9px 9px;
+    z-index: 1;
+    border: 2px solid#673C62;
+    transition: all 0.5s ease;
+}
+#inicio a:hover{
+    background: transparent;
+      color: #673C62;
+      box-shadow: 0 0 5px #673C62, 0 0 40px #673C62;
 }
 #sobre-mi{
     background-color: #CEF7A0;
