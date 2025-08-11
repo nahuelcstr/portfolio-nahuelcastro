@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
+:root{
+    --color-primario: #CEF7A0;
+    --color-secundario: #673C62;
+    --color-blanco: #F0F2FA;
+    --color-negro: #141414;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -13,42 +18,98 @@ body{
 /* NAVBAR */
 h1{
     line-height: 0.9;
-    color: #673C62 ;
-    pad: 5px;
+    color: var(--color-secundario);
 }
+/* MOBILE*/
 .nav{
-    display: flex;
-    width: 100%;
-    height: 75px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #CEF7A0;
-    padding: 0 4rem;
-    /*OCULTAR NAVBAR*/
+    background-color: var(--color-primario);
     position: fixed;
-    opacity: 0;
-    transform: translateY(-100%);
+    width: 100%;
+    top: -100%;
     transition: opacity 0.6s ease, transform 0.6s ease;
     z-index: 1000;
 }
-.nav.show {
-  opacity: 1;
-  transform: translateY(0);
+.nav.show{
+    opacity: 1;
+    top: 0%;
 }
-.options ul a{
+.nav-container{
+    width: 90%;
+    height: 80px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+    --icono-menu: url("./images/menu_50dp_F0F2FA_FILL1_wght500_GRAD0_opsz48.png");
+}
+/*VERIFICADOR DEL CHECKBOX*/
+.nav-container:has(.nav-input:checked){
+    --icono-menu: url("./images/close_50dp_F0F2FA_FILL1_wght500_GRAD0_opsz48.png");
+    .nav-list{
+        transform: translateX(0%);
+    }
+}
+.nav-list{
+    list-style: none;
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    padding: 2rem 5%;
+    background-color: var(--color-primario);
+
+    transform: translateX(-100%);
+    transition: .5s transform;
+}
+.nav-link{
+    cursor: pointer;
+    list-style: none;
     text-decoration: none;
-    cursor: pointer;
-    color: #673C62 ;
-    margin: 0 10px;
+    color: var(--color-secundario);
 }
-.nav button{
-    padding: 10px 30px;
-    color: #F0F2FA;
-    background: #673C62;
+.nav h1, .nav-btn{
+    z-index: 10;
+}
+.nav-btn{
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-image: var(--icono-menu);
+    background-size: cover;
+
+    background-color: var(--color-secundario);
     border-radius: 50px;
-    border: none;
-    transition: all 0.2s;
+    border: 5px solid #673C62;
+
+    transition: backgruund-image 0.5s;
+}
+.nav-input{
+    display:none; 
+}
+@media (width > 678px){
+    .nav-btn{
+        display: none ;
+        position: fixed;
+    }
+    .nav-list{
+        transform: translateX(0);
+        flex-direction: row;
+        position: absolute;
+        justify-content: end;
+    }
+    #btn-contacto{
+        color: var(--color-blanco);
+        background-color: var(--color-secundario);
+        padding: 0.5rem 1rem;
+        border-radius: 50px 50px;
+    }
 }
 /*SECTORES*/
 main{
@@ -64,48 +125,48 @@ main{
     height: 100vh;
 }
 #inicio{
-    background-color: #F0F2FA;
+    background-color: var(--color-blanco);
     min-height: 100%; 
     font-size: xx-large;
     box-sizing: border-box;
 }
 #inicio span{
-    color: #673C62;
+    color: var(--color-secundario);
 }
 #inicio a{
     font-size: large;
     text-decoration: none;
-    color:#F0F2FA;
-    background-color: #673C62;
+    color: var(--color-blanco);
+    background-color: var(--color-secundario);
     line-height: 5rem;
     padding: 9px 9px;
     z-index: 1;
-    border: 2px solid#673C62;
+    border: 2px solid var(--color-secundario);
     transition: all 0.5s ease;
 }
 #inicio a:hover{
     background: transparent;
-      color: #673C62;
-      box-shadow: 0 0 5px #673C62, 0 0 40px #673C62;
+      color: var(--color-secundario);
+      box-shadow: 0 0 5px var(--color-secundario), 0 0 40px var(--color-secundario);
 }
 #sobre-mi{
-    background-color: #CEF7A0;
+    background-color: var(--color-primario);
 }
 #educacion{
-    background-color: #F0F2FA;
+    background-color: var(--color-blanco);
 }
 #proyectos{
-    background-color: #CEF7A0;
+    background-color: var(--color-primario);
 }
 #contacto{
-    background-color: #F0F2FA;
+    background-color: var(--color-blanco);
 }
 /* PIE DE PAGINA */
 footer{
-    background-color: #141414;
+    background-color: var(--color-negro);
     height: 100px;
 }
 footer span{
-    color: #F0F2FA;
+    color: var(--color-blanco);
     
 }

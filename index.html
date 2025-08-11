@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    </div>
-    <header class="nav">
-      <h1>Cn.</h1>
-      <nav class="options">
-        <ul>
-          <a href="#inicio">Inicio</a></li>
-          <a href="#sobre-mi">Sobre mi</a></li>
-          <a href="#educacion">Educacion</a></li>
-          <a href="#proyectos">Proyectos</a></li>
-        </ul>
-      </nav>
-      <a href="#contacto"><button>Contacto</button></a>
-    </header>
+    <nav class="nav">
+        <div class="nav-container">
+            <h1>Cn.</h1>
+            <ul class="nav-list">
+                <li class="nav-option"><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li class="nav-option"><a class="nav-link" href="#sobre-mi">Sobre mi</a></li>
+                <li class="nav-option"><a class="nav-link" href="#educacion">Educacion</a></li>
+                <li class="nav-option"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li class="nav-option"><a id="btn-contacto" class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+            <label class="nav-btn">
+              <input type="checkbox" class="nav-input" id="menu-input">
+            </label>
+        </div>
+    </nav>
         <section id="inicio" class="containerSection">
           <div>
               Hola, mi nombre es 
@@ -40,17 +42,8 @@
         </section>
         <section id="educacion" class="containerSection">Educacion:</section>
         <section id="proyectos" class="containerSection">Proyectos:</section>
-        <section id="contacto" class="containerSection">Contacto:</section>
-        <script>
-            window.addEventListener('scroll', () => {
-              const nav = document.querySelector('.nav');
-              if (window.scrollY > 100) {
-                nav.classList.add('show');
-              } else {
-                navbar.classList.remove('show');
-              }
-            });
-</script>
+        <section id="contacto" class="containerSection">Contacto:</section> 
+    <script text="text-js" src="script.js"></script>
   </body>
   <footer>
     <span>©2025 Nahuel Castro</span>
