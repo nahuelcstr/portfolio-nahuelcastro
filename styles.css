@@ -125,7 +125,9 @@ h1{
     overflow: hidden;
 }
 h2{
-    font-size: x-large;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-secundario);
 }
 
 /*INICIO*/
@@ -158,7 +160,6 @@ h2{
 #sobre-mi{
     background-color: var(--color-primario);
     flex-direction: column;
-    font-size: x-large;
     min-height: 100vh;
     height: auto;
     scroll-margin-top: 60px; /*para evitar que el titulo quede tapado*/
@@ -231,15 +232,73 @@ h2{
     }
 }
 
-
-#educacion{
+#habilidades{
     background-color: var(--color-blanco);
+    flex-direction: column;
+    font-size: x-large;
+    min-height: 100vh;
+    scroll-margin-top: 60px; /*para evitar que el titulo quede tapado*/
+    gap: 3rem;
+}
+#habilidades h2{
+    font-size: 30px;
+    font-weight: 900;
+}
+.h-container{
+    text-align: center;
+    font-size: medium;
 }
 #proyectos{
     background-color: var(--color-primario);
+    text-align: center;
+}
+.p-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 #contacto{
     background-color: var(--color-blanco);
+    flex-direction: column;
+    height: auto;
+    padding: 5rem 3rem;
+}
+#contacto p{
+    margin: 5rem 0;
+    text-align: center;
+    font-size: medium;
+}
+.c-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.c-container img{
+    height: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.c-container img:hover{
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.378);
+}
+.c-container #wsp:hover{
+    border-radius: 50%;
+    background-color: #07c757; 
+}
+.c-container #ig:hover{
+    border-radius: 50%;
+    background-color: #b61950;
+}
+.c-container #gh:hover{
+    border-radius: 50%;
+    background-color: var(--color-blanco);    
+}
+.c-container #email:hover{
+    border-radius: 50%;
+    background-color: #3558e2;
 }
 /* PIE DE PAGINA */
 footer{
